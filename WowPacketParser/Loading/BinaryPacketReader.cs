@@ -188,6 +188,7 @@ namespace WowPacketParser.Loading
             }
             else if (_sniffType == SniffType.Ari) // Ari
             {
+                int buildnumber = _reader.ReadInt32();
                 opcode = _reader.ReadInt32();
                 direction = (Direction)_reader.ReadByte();
                 length = _reader.ReadInt32();
